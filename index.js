@@ -26,7 +26,7 @@ const server = httpserver.createServer((req, res) => {
     res.write(JSON.stringify(users));
   } else if(req.url == '/html' && req.method == 'GET'){
     res.write(htmlfile);
-  } else if(req.url == '/adduser' && req.method == 'POST'){
+  } else if(req.url == '/addUser' && req.method == 'POST'){
     res.on('data', function(chunk){
       users.push(JSON.parse(chunk));
       res.write(chunk);
